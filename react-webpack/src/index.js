@@ -1,9 +1,8 @@
 'use strict'
 
-const React = require('react')
-const ReactDOM = require('react-dom')
-
-const Title = require('./app')
+import Title from './app.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 ReactDOM.render(
     React.createElement(Title),
