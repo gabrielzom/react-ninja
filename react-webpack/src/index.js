@@ -2,9 +2,9 @@
 
 import Title from './app.js'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 
-ReactDOM.render(
+render(
     React.createElement(Title),
     document.querySelector('[data-js="app"]')
 )
