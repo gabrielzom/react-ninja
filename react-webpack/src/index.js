@@ -11,3 +11,15 @@ render(
     </AppContainer>,
     document.querySelector('[data-js="app"]')
 )
+
+if(module.hot) {
+    module.hot.accept('./app.js', () => {
+        const NextApp = require('./app').default;
+        render(
+            <AppContainer>
+                <NextApp/>
+            </AppContainer>,
+            document.querySelector('[data-js="app"]')
+        )
+    })
+}
