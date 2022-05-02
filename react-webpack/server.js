@@ -9,11 +9,11 @@ new WebpackDevServer(webpack(config), {
     hot: true,
     historyApiFallback: true,
     stats : { colors: true }
-}).listen(3000, () => {
+}).listen(3000, (err) => {
     if(err) {
         return console.log('-- Error in the server: ' + err)
 
     } else {
-        console.log('-- Server listening in port 3000')
+        console.log('-- Server listening in http://localhost:3000')
     }
 })
