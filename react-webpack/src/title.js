@@ -2,7 +2,12 @@
 
 import React from 'react'
 
-const Title = React.createClass({
+const Title = (props) => (
+    <h1>Hello, GN</h1>
+  )
+
+
+/* const Title = React.createClass({
   getDefaultProps: function () {
     return {
       name: 'Unknown',
@@ -13,6 +18,6 @@ const Title = React.createClass({
   render: function () {
     return <h1>Hello, {this.props.name} {this.props.surname} !</h1>
   }
-})
+}) */
 
 export default Title
