@@ -1,5 +1,4 @@
 'use strict'
-
 import React from 'react'
 
 const Title = ({name, surname}) => (

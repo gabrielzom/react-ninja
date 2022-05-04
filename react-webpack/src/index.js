@@ -1,5 +1,4 @@
 'use strict'
-
 import App from './app.js'
 import renderApp from './functions/renderApp.js'
 

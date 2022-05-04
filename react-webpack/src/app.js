@@ -1,12 +1,15 @@
 'use strict'
-import React from 'react'
-import Title from './title.js'
+import React, { Component } from 'react'
+import Square from './square.js'
+import colors from './functions/colors.js'
 
-class App extends React.Component {
+class App extends Component {
   render () {
     return (
       <div className='container'>
-        <Title name='Gabriel' surname='Sales' />
+        {colors.map((color, index) => (
+          <Square key={index} backgroundColor={color} />
+        ))}
       </div>
     )
   }
