@@ -3,8 +3,8 @@
 import React from 'react'
 
 const Title = ({name, surname}) => (
-    <h1>{`Hello, ${name} ${surname} ! `}</h1>
-  )
+  <h1>{`Hello, ${name} ${surname} ! `}</h1>
+)
 
 Title.defaultProps = {
   name: 'Unknown',

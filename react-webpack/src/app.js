@@ -2,16 +2,14 @@
 import React from 'react'
 import Title from './title.js'
 
-const App = React.createClass({
-  render: function () {
+class App extends React.Component {
+  render () {
     return (
       <div className='container'>
         <Title name='Gabriel' surname='Sales' />
-        <label htmlFor='input'>Input</label>
-        <input type='text' id='input' />
       </div>
     )
   }
-})
+}
 
 export default App
