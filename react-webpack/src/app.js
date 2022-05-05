@@ -1,17 +1,14 @@
 'use strict'
 import React, { Component } from 'react'
-import Square from './square.js'
-import colors from './functions/colors.js'
 import Button from './button.js'
 
 class App extends Component {
   render () {
     return (
-      <div className='container' >
-        {colors.map((color, index) => (
-          <Square key={index} backgroundColor={color} />
-        ))}
-      </div>
+      <Button>
+        <span>Hello</span>
+        Wolrd
+      </Button>
     )
   }
 }

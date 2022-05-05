@@ -2,6 +2,8 @@
 
 import React from 'react'
 
-export default function Button() {
-  <button>Botão</button>
-}
+const Button = ({ children }) => (
+  <button>{children}</button>
+)
+
+export default Button
