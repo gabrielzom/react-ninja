@@ -3,7 +3,9 @@
 import React from 'react'
 
 const Square = ({ backgroundColor }) => (
-  <div style={{
+  <div onClick={() => {
+    alert(`Clicked in ${backgroundColor} div !`)
+  }} style={{
     backgroundColor,
     height: '10px',
     width: '500px'
