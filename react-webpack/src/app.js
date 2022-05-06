@@ -4,7 +4,8 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      value: 'initial value 2'
+      value: 'initial value 2',
+      checked: false
     }
   }
   render () {
@@ -12,7 +13,9 @@ class App extends Component {
     return (
       <div>
         <form>
-          <input type='text' value={this.state.value}
+          <input
+            type='text'
+            value={this.state.value}
             onChange={(e) => {
               console.log(e)
               this.setState({
@@ -20,6 +23,30 @@ class App extends Component {
               })
             }}
           />
+
+          <label>
+            <input
+              type='checkbox'
+              checked={this.state.checked}
+              onChange={(e) => {
+                this.setState({ checked: e.target.checked })
+              }}
+              />
+            Checklist
+          </label>
+
+          <input
+            type='radio'
+            defaultChecked
+            name='radio'
+            value='rd1'
+          /> Radio One
+
+          <input
+            type='radio'
+            name='radio'
+            value='rd2'
+          /> Radio Two
         </form>
       </div>
     )
