@@ -7,8 +7,8 @@ const Square = ({ backgroundColor }) => (
     alert(`Clicked in ${backgroundColor} div !`)
   }} style={{
     backgroundColor,
-    height: '10px',
-    width: '500px'
+    height: '130px',
+    width: '130px'
   }} />
 )
 
