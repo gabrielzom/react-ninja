@@ -12,7 +12,16 @@ class App extends Component {
     console.log('render app')
     return (
       <div>
-        <form>
+        <form
+          onChange={(e) => {
+            console.log('event onchange --> ', e)
+          }}
+
+          onSubmit={(e) => {
+            e.preventDefault()
+            console.log('event onsubmit --> ', e)
+          }}
+        >
           <input
             type='text'
             value={this.state.value}
@@ -39,15 +48,16 @@ class App extends Component {
             type='radio'
             defaultChecked
             name='radio'
-            value='rd1'
+            value='Integra'
           /> Radio One
 
           <input
             type='radio'
             name='radio'
-            value='rd2'
+            value='Portal'
           /> Radio Two
           <br />
+
           <label>
             Select One
             <select value={this.state.value} onChange={(e) => {
@@ -60,6 +70,12 @@ class App extends Component {
               <option value='3'>option 3</option>
             </select>
           </label>
+          <br />
+
+          <textarea name='comment' defaultValue={'default\nvalue'} />
+
+          <button type='submit'>Submit</button>
+
         </form>
       </div>
     )
