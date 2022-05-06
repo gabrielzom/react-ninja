@@ -13,19 +13,11 @@ class App extends Component {
   render () {
     return (
       <div className='container' onClick={() => {
-        if (this.state.text === 'Gabriel') {
-          return (
-            this.setState({
-              text: 'Sales'
-            })
-          )
-        } else {
-          return (
-            this.setState({
-              text: 'Gabriel'
-            })
-          )
-        }
+        this.state.text === 'Gabriel' ? this.setState({
+          text: 'Sales'
+        }) : this.setState({
+          text: 'Gabriel'
+        })
       }}>
         {this.state.text}
       </div >
