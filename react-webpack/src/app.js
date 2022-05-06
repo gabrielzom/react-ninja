@@ -5,10 +5,11 @@ class App extends Component {
     super()
     this.state = {
       value: '1',
-      checked: false
+      checked: false,
+      showContent: false
     }
   }
-  render () {
+  /* render () {
     console.log('render app')
     return (
       <div>
@@ -37,8 +38,8 @@ class App extends Component {
             <input
               type='checkbox'
               checked={this.state.checked}
-              onChange={(e) => {
-                this.setState({ checked: e.target.checked })
+              onChange={() => {
+                this.setState({ checked: !this.state.checked })
               }}
               />
             Checklist
@@ -77,6 +78,32 @@ class App extends Component {
           <button type='submit'>Submit</button>
 
         </form>
+        
+      </div>
+    )
+  }
+  */
+  // ------------------ AULA 45 ------------------ //
+  render () {
+    return (
+      <div>
+        <label>
+          <input
+            type='checkbox'
+            checked={this.state.checked}
+            onChange={() => {
+              this.setState({
+                checked: !this.state.checked,
+              }, () => {
+                this.setState({
+                  showContent: !this.state.showContent
+                })
+              })
+            }}
+          /> Show content
+        </label>
+
+        { this.state.showContent && <div>Look at me here !</div> }
       </div>
     )
   }
