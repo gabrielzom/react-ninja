@@ -13,7 +13,7 @@ const Search = ({ handleSearch }) => (
 )
 
 Search.propTypes = {
-  handleSearch: React.PropTypes.func.isRequired  
+  handleSearch: React.PropTypes.func.isRequired
 }
 
 export default Search
