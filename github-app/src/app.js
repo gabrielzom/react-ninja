@@ -23,7 +23,9 @@ class App extends Component {
           starreds: data
         })
       })
-      .catch(error => console.error('REQUEST ERROR --> ', error))
+      .catch(error =>
+        console.error('REQUEST FAILED ', error)
+      )
   }
 
   handleSearch (e) {
@@ -33,18 +35,12 @@ class App extends Component {
         .get(`/users/${e.target.value}`)
         .then(({ data }) => {
           this.setState({
-            userInfo: {
-              name: data.name,
-              login: data.login,
-              public_repos: data.public_repos,
-              followers: data.followers,
-              following: data.following,
-              bio: data.bio,
-              avatar_url: data.avatar_url
-            }
+            userInfo: data
           })
         })
-        .catch(error => console.error('REQUEST ERROR --> ', error))
+        .catch(error =>
+          console.error('RESQUEST FAILED ', error)
+        )
     }
   }
 
